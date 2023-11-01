@@ -24,7 +24,6 @@ axs[1].set_title("Umidade")
 axs[1].set_xlabel("tempo (s)")
 axs[1].set_ylabel("umidade relativa (%)")
 
-
 x1=[]
 y1=[]
 
@@ -80,16 +79,16 @@ def atualiza(i):
             if len(y2)>len(x2):
                 x2.append(time.time()-start)
     axs[0].clear()
-    axs[0].plot(x1,y1,"-o")
+    axs[0].plot(x1,y1,"r-o")
     axs[0].set_xlabel("tempo (s)")
-    axs[0].set_ylabel("valor digitado")
-    axs[0].set_title("temperatura")
+    axs[0].set_ylabel("temperatura (º C)")
+    axs[0].set_title("temperatura em tempo real")
 
     axs[1].clear()
     axs[1].plot(x2,y2,"-o")
     axs[1].set_xlabel("tempo (s)")
-    axs[1].set_ylabel("valor digitado")
-    axs[1].set_title("temperatura")
+    axs[1].set_ylabel("Umidade relativa (%)")
+    axs[1].set_title("umidade relatica em tempo real")
 
     y1.clear()
     y2.clear()
